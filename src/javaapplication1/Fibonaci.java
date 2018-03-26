@@ -1,37 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package javaapplication1;
-
-import java.util.Scanner;
-
-/**
- *
- * @author Praktikan
- */
-
-
-public class Fibonaci {
-    public static void main(String[]args) {
-        Scanner show = new Scanner(System.in);
-        System.out.print("Input: \n");
-        int n = show.nextInt();
+ public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("");
+        System.out.print("Masukan Jumlah Deret Fibonacci : ");
+        int n = input.nextInt();
         long fib[] = new long[n];
          
         fib[0] = 0;
         fib[1] = 1;
-        System.out.println("Ouput: ");
+        int hitung=0;
          
         for(int i = 2; i < n; i++) {
-           
             fib[i] = fib[i-1] + fib[i-2];
         }
          
         for (int i = 0; i < n; i++) {
             System.out.print(fib[i] +  " ");
+             hitung +=fib[i];
         }
+        System.out.println("");
+        System.out.println("Output :"+ hitung);
+       }   
     }
- 
-}
